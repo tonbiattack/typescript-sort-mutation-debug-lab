@@ -1,0 +1,5 @@
+node_modules/
+dist/
+bug-test-output.txt
+coverage/
+.DS_Store

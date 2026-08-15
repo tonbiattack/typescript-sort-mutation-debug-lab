@@ -1,0 +1,21 @@
+{
+  "name": "typescript-sort-mutation-debug-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScriptでArray.sort()による入力配列の破壊的変更を再現・修正するデバッグラボ",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run clean && npm run build && node --test dist/test/**/*.test.js",
+    "test:chapter-01": "npm run clean && npm run build && node --test --test-name-pattern='第01章' dist/test/**/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
