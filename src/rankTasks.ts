@@ -7,5 +7,5 @@ export type Task = {
  * タスクを優先度の降順に並べます。
  */
 export function rankTasksByPriority(tasks: Task[]): Task[] {
-  return tasks.sort((left, right) => right.priority - left.priority);
+  return [...tasks].sort((left, right) => right.priority - left.priority);
 }
